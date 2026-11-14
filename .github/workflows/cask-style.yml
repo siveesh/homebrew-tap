@@ -1,0 +1,17 @@
+name: Cask style
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  style:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: tap
+      - name: Place checkout in Homebrew tap directory
+        run: |
+          mkdir -p "$(brew --repository)/Library/Taps/siveesh"
+          ln -s "$GITHUB_WORKSPACE/tap" "$(brew --repository)/Library/Taps/siveesh/homebrew-tap"
+      - name: Check cask style
+        run: brew style --cask siveesh/tap/sks-app-menu

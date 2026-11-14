@@ -1,18 +1,19 @@
-# Siveesh Tap
+# Siveesh Homebrew tap
 
-## How do I install these formulae?
+Homebrew casks for Siveesh Kodapully projects.
 
-`brew install siveesh/tap/<formula>`
+## SK’s App Menu
 
-Or `brew tap siveesh/tap` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "siveesh/tap"
-brew "<formula>"
+```bash
+brew tap siveesh/tap
+brew trust --cask siveesh/tap/sks-app-menu
+brew install --cask siveesh/tap/sks-app-menu
 ```
 
-## Documentation
+Requires Apple silicon and macOS27+. The current app is Developer ID-signed but not notarized; Gatekeeper may prevent opening downloaded copies. This tap does not bypass security checks or delete app preferences. It is not an official Homebrew listing.
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+[Project and user guide](https://github.com/siveesh/sks-app-menu) · [Releases](https://github.com/siveesh/sks-app-menu/releases) · [Notarization setup](https://github.com/siveesh/sks-app-menu/blob/main/docs/Notarization.md)
+
+Cask version/checksum are mirrored from the project’s Casks directory. Update only after verifying the final release download. MIT licensed.
+
+Homebrew7 requires trust before loading a third-party cask. Review its source and trust only the intended cask. This is not a Gatekeeper bypass.
