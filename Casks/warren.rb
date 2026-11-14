@@ -2,10 +2,10 @@ cask "warren" do
   version "1.2"
   sha256 "0cb0b2908af229b38ac11c98939215fd8821691a2d139ed660a751ee66cafa37"
 
-  url "https://github.com/siveesh/sk-mole/releases/download/v#{version}/Warren-#{version}.dmg"
+  url "https://github.com/siveesh/warren/releases/download/v#{version}/Warren-#{version}.dmg"
   name "Warren"
   desc "Cleanup, uninstaller, storage insight, Homebrew and menu bar monitoring"
-  homepage "https://github.com/siveesh/sk-mole"
+  homepage "https://github.com/siveesh/warren"
 
   livecheck do
     url :url
